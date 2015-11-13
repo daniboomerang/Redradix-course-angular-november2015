@@ -1,0 +1,7 @@
+<div id="products-navbar">
+    <ul>
+        <li ng-repeat="product in productsList" class="pure-menu-item" ng-class="{'products-navbar-link-active': product.name == currentProductName}">
+			<a ui-sref="products.open({ productName: product.name })" ng-class="{'products-navbar-link-active': product.name == currentProductName}"> <h4> {{ product.name }} </h4> </a>
+        </li>
+    </ul>
+</div>

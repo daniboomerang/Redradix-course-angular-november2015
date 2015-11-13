@@ -1,0 +1,7 @@
+1. Crear 2 barras de navegación:
+	La barra de navegacion proncipal.
+	La barra de navegación de la sección productos
+
+2. Crea un footer
+
+3. Crear E2E tests para comprobar que la navegación es correcta a través de las 2 barras

@@ -12,9 +12,9 @@ gnaAsDirective.controller('gnaAsDirectiveCtrl', function ($scope, $interval){
     }, 1000);
   };
 
-/* Crea tu directiva aqui */
-
 });
+
+/* Crea tu directiva aqui */
 
 
     

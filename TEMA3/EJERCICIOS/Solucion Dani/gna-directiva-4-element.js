@@ -11,7 +11,7 @@ gnaAsDirective.directive('gna', function($interval) {
                ' </div> ',
     link: function (scope, element, attrs) {
       
-      numberId = element.find('.number');
+      var numberId = element.find('.number');
 
       function generateRandomNumber (mod){ return Math.floor((Math.random() * mod) + 1) }
       scope.mod = attrs.mod;

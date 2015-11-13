@@ -1,0 +1,5 @@
+1. Crear 2 directivas para mostrar la información de productos:
+	LA primera directiva es capaz de iterar en la lista de productos y mostrar..
+	La segunda muestra las especificaciones técnicas
+
+2. Crear Unit y E2E tests

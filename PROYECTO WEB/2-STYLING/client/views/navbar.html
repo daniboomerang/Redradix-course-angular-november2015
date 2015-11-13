@@ -1,0 +1,7 @@
+<div>
+	<span id="brand"><li><a ui-sref="home"><h3>HOME</h3></a></li></span>
+    <ul>
+        <li ng-repeat="module in modules"><a ng-class="{'link-active': module.title == currentModuleName}" id="{{module.idLink}}" ui-sref="{{module.state}}" class="inline"><h3>{{module.text}}</h3></a> 
+        </li>
+    </ul>
+</div>

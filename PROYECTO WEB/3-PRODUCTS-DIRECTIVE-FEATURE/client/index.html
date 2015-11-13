@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+    <head lang="es">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <base href="/">
+        <title>Angular Course</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="">
+
+
+        <!-- APP CSS -->
+        <link rel="stylesheet" href="styles/app.css">
+        <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/footer.css">
+ 
+        <!-- APP MODULES-->
+            <!-- HOME MODULE -->
+            <link rel="stylesheet" href="modules/home/css/home.css">
+            <!-- PRODUCTS MODULE -->
+            <link rel="stylesheet" href="modules/products/css/products.css">
+
+    </head>
+
+    <body ng-app="app">
+
+        <div id="navbar" navbar></div>
+        <div id="content" ui-view></div>
+        <div id="footer" footer></div>
+
+        <script src="scripts/vendor/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  
+        <!-- APP SCRIPTS-->
+        <script src="scripts/app.js"></script>
+        <!-- -->      
+
+        <!-- APP MODULES-->
+            <!-- SERVICE MODULE-->
+            <script src="modules/home/scripts/home.js"></script>
+            <script src="modules/home/scripts/directives.js"></script>
+            <!-- -->      
+             <!-- API MODULE-->
+            <script src="modules/products/scripts/products.js"></script>
+            <script src="modules/products/scripts/directives.js"></script>
+            <script src="modules/products/scripts/services.js"></script>
+            <!-- -->      
+
+    </body>
+
+</html>
