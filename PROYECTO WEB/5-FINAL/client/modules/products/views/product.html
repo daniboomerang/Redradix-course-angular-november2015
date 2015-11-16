@@ -1,0 +1,14 @@
+<div id="product-container" du-scrollSpy="product-container">
+	<div id="product-navbar-wrapper">
+		<div product-navbar product="product" is-active="navbarProductActive" current-product-subsection=" currentProductSubsection"></div>
+	</div>
+	<div id="product-info-container">
+		<h1 id="product-description" class="title"> {{ product.description }} </h1>
+		<div id="{{subsection.name.toLowerCase()}}" du-scrollspy="{{subsection.name.toLowerCase()}}" ng-repeat="subsection in product.subsections">
+			<product-subsection info="subsection"></product-subsection>
+		</div>
+		<div id="technical-specs-wrapper" du-scrollspy="technical-specs-wrapper">
+			<technical-specifications info="product.technicalSpecs"></technical-specifications>
+		</div>
+	</div>
+</div>

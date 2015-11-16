@@ -1,0 +1,7 @@
+<div id="products-navbar" du-scrollspy="products-navbar">
+    <ul>
+        <li ng-repeat="product in productsList" ng-class="{'products-navbar-link-active': product.name == currentProductName}">
+			<a ui-sref="products.open({ productName: product.name })" ng-class="{'products-navbar-link-active': product.name == currentProductName}"><img style="border: solid gray 1px" src="{{product.icon}}"><div>{{ product.name }}</div></a>
+        </li>
+    </ul>
+</div>
