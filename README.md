@@ -59,6 +59,8 @@
 * The promise API
 
 ### Svg manipulations
+* Binding SVG properties and the scope
+* ng-include
 
 ### Angular UI Router
 * Router vs states
@@ -69,5 +71,5 @@
 * Routed with the state provider
 * Designed with directives and only directives 
 * Triggers animations on scroll
-* Retrieves information from and external API
+* Mocks and external API
 * Unit and E2E tested 
