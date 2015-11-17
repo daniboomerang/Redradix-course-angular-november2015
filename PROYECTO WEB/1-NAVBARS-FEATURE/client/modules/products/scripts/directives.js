@@ -1,5 +1,12 @@
 var productsDirectives = angular.module('productsDirectives', ['productsServices']);  
 
+productsDirectives.directive('index', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'modules/products/views/index.html'
+  };
+});
+
 productsDirectives.directive('products', function(Products, $q) {
   return {
     restrict: 'E',
@@ -14,21 +21,28 @@ productsDirectives.directive('products', function(Products, $q) {
   };
 });
 
-productsDirectives.directive('index', function() {
+productsDirectives.directive('productsNavbar', function($location) {
   return {
-    restrict: 'E',
-    templateUrl: 'modules/products/views/index.html'
+    restrict: 'EA',  
+    templateUrl: 'modules/products/views/products-navbar.html'
   };
 });
 
 productsDirectives.directive('product', function($state, Products) {
   return {
-    restrict: 'E',
+    restrict: 'EA',
     templateUrl: 'modules/products/views/product.html',
     controller: function($scope) {
       Products.open($state.params.productName).then(function(product) {
         $scope.product = product;
       });
     }
+  };
+});
+
+productsDirectives.directive('productNavbar', function() {
+  return {
+    restrict: 'EA',  
+    templateUrl: 'modules/products/views/product-navbar.html'
   };
 });
