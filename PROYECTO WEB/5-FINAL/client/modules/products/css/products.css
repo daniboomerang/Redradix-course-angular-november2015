@@ -5,12 +5,11 @@
 ********/
 #product-info-container { padding-top: 10%; }
 #product-description { margin-bottom: 10%; }
-.subsection-element { padding: 4.5em 3em 4.5em 3em; }
-.subsection-element { height: 250px; height: auto; }
+.subsection-element { height: 250px; height: auto; padding: 4.5em 3em 4.5em 3em; }
 .subsection-subelement-wrapper.left { width: 100%; }
 .subsection-subelement-wrapper.right { width: 100%; }
 .subsection-subelement { margin-bottom: 5%; }
-.technical-specifications-container { padding: 1.5em 0.5em 1.5em 0.5em; }
+#technical-specifications-container { padding: 5em 0.5em 1.5em 0.5em; }
 .technical-specs-section { margin-top: 2%; }
 table.technical-specs-table { margin-top: 2%; }
 
@@ -38,7 +37,7 @@ a.products-navbar-link-active { color: #58ACFA !important; }
 	-moz-transition: background-color 0.3s, color 0.1s, height 0.3s, padding 0.3s; 
 	-ms-transition: background-color 0.3s, color 0.1s, height 0.3s, padding 0.3s;
 	-o-transition: background-color 0.3s, color 0.1s, height 0.3s, padding 0.3s; 
-	transition: background-color 0.3s, color 0.1s, height 0.3s, padding 0.3s;   
+	transition: background-color 0.3s, color 0.1s, height 0.3s, padding 0.3s;
 	height: 9vh; padding: 0.5vh; background: rgba(0,0,0,0.8); color: white;  width:100%;
 }
 #product-navbar.on-navbar-active { 

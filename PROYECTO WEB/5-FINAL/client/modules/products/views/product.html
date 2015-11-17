@@ -4,10 +4,10 @@
 	</div>
 	<div id="product-info-container">
 		<h1 id="product-description" class="title"> {{ product.description }} </h1>
-		<div id="{{subsection.name.toLowerCase()}}" du-scrollspy="{{subsection.name.toLowerCase()}}" ng-repeat="subsection in product.subsections">
+		<div id="{{subsection.name.toLowerCase()}}" du-scrollspy="{{subsection.name.toLowerCase()}}" ng-repeat="subsection in product.subsections" offset="90">
 			<product-subsection info="subsection"></product-subsection>
 		</div>
-		<div id="technical-specs-wrapper" du-scrollspy="technical-specs-wrapper">
+		<div id="technical-specs-wrapper" du-scrollspy="technical-specs-wrapper" offset="90">
 			<technical-specifications info="product.technicalSpecs"></technical-specifications>
 		</div>
 	</div>

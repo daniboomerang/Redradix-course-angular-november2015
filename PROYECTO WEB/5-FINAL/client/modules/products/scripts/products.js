@@ -32,7 +32,7 @@ products.config(function($stateProvider, $urlRouterProvider) {
 
 products.run(function (scrollObserverService) { scrollObserverService.init(); });
 products.value('duScrollEasing', function easingFunction(t) { return t*(2-t) });
-products.value('duScrollOffset', 80);
+/*products.value('duScrollOffset', 80);*/
 
 
 

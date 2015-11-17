@@ -117,7 +117,7 @@
                   "description": "Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.",
                   "image":"http://placehold.it/800x350/ffffff/000000"
                 },
-                { "name": "Technology",
+                { "name": "Watterproof",
                   "type": "image-text",
                   "background": "#EEEEEE",
                   "description": "<h2 class='title'>Praesent commodo cursus magna</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>",
@@ -283,7 +283,7 @@
                   "description": "<h2 class='title'>Praesent commodo cursus magna</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>",
                   "image":"http://placehold.it/800x350/ffffff/000000"
                 },
-                { "name": "Watter Resistant",
+                { "name": "Watterproof",
                   "type": "text-image",
                   "background": "rgba(255, 255, 255, 0.1)",
                   "description": "<h2 class='title'>Praesent commodo cursus magna</h2><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>",

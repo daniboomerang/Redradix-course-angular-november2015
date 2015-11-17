@@ -1,4 +1,4 @@
-<div id="navbar" du-scrollspy="navbar">
+<div id="navbar" du-scrollspy="navbar" offset="80">
 	<ul>
 		<li id="brand"><a ng-class="{'navbar-link-active': '' == currentModuleName}" ui-sref="home"><h3>HOME</h3></a></li>
         <li ng-repeat="module in modules" class="module-element"><a ng-class="{'navbar-link-active': module.name == currentModuleName}" id="{{module.idLink}}" ui-sref="{{module.state}}"><h3>{{ module.text }}</h3></a> 
