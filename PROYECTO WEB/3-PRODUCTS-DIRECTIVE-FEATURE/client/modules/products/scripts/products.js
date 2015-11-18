@@ -1,4 +1,6 @@
-var products = angular.module('products', ['productsDirectives']);  
+var products = angular.module('products', [
+	'productsDirectives'
+]);  
 
 products.config(function($stateProvider, $urlRouterProvider) {
 
@@ -25,3 +27,4 @@ products.config(function($stateProvider, $urlRouterProvider) {
 				template: '<product></product>'	// This is the 'Web Component' Product
         	})
 })
+

@@ -28,19 +28,18 @@ a:focus { color: #58ACFA; }
  CUSTOM SCROLL BAR 
 *******************/
 
-::-webkit-scrollbar { height: 2px; }
-::-webkit-scrollbar-track-piece  { background-color: #fff; border: 1px solid #fff; -webkit-border-radius: 6px; }
+::-webkit-scrollbar { height: 1px; width: 0px; }
+::-webkit-scrollbar-track-piece  { background-color: red; border: 1px solid #fff; -webkit-border-radius: 6px; }
 ::-webkit-scrollbar-thumb:horizontal { background-color: #eee; border: 1px solid #ddd; -webkit-border-radius: 6px; }
 
 /**************
  Layout styles
 **************/
 
-#navbar { height: 10vh; }
-#content { min-height: 60vh; }
-#footer { height: 5vh; }
+#navbar { height: 10%; }
+#content { min-height: 77%; }
+#footer { height: 8%; }
 #not-found-container { margin: 4em 4em 4em 4em; text-align: center; }
-.container { max-width: 50em; margin: 0 auto; }
 
 /**************
  Single styles
