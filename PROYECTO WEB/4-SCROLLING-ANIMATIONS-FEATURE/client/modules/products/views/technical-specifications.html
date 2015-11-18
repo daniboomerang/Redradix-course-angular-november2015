@@ -1,6 +1,6 @@
-<div class="technical-specifications-container">
+<div id="technical-specifications-container">
 	<h2 class="title">Technical specifications</h2>
-	<div class="technical-specs-section">
+	<div ng-hide="(!info) || (!(info.design))" class="technical-specs-section">
 		<h4 class="title">Design</h4>
 		<table class="technical-specs-table">
 			<thead>
@@ -14,11 +14,80 @@
 			</thead>
 			<tbody>
 				<tr>
-					<td data-label="Type">{{ design.type }}</td>
-					<td data-label="OS">{{ design.OS }}</td>
-					<td data-label="Dimensions">{{ design.dimensions }}</td>
-					<td data-label="Weight">{{ design.weight }}</td>
-					<td data-label="Materials">{{ design.materials }}</td>
+					<td data-label="Type">{{ info.design.type }}</td>
+					<td data-label="OS">{{ info.design.OS }}</td>
+					<td data-label="Dimensions">{{ info.design.dimensions }}</td>
+					<td data-label="Weight">{{ info.design.weight }}</td>
+					<td data-label="Materials">{{ info.design.materials }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div ng-hide="(!info) || (!(info.display))" class="technical-specs-section">
+		<h4 class="title">Display</h4>
+		<table class="technical-specs-table">
+			<thead>
+				<tr>
+					<th>Type</th>
+					<th>OS</th>
+					<th>Dimensions</th>
+					<th>Weight</th>
+					<th>Material</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Type">{{ info.display.type }}</td>
+					<td data-label="OS">{{ info.display.OS }}</td>
+					<td data-label="Dimensions">{{ info.display.dimensions }}</td>
+					<td data-label="Weight">{{ info.display.weight }}</td>
+					<td data-label="Materials">{{ info.display.materials }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div ng-hide="(!info) || (!(info.camera))" class="technical-specs-section">
+		<h4 class="title">Camera</h4>
+		<table class="technical-specs-table">
+			<thead>
+				<tr>
+					<th>Type</th>
+					<th>OS</th>
+					<th>Dimensions</th>
+					<th>Weight</th>
+					<th>Material</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Type">{{ info.camera.type }}</td>
+					<td data-label="OS">{{ info.camera.OS }}</td>
+					<td data-label="Dimensions">{{ info.camera.dimensions }}</td>
+					<td data-label="Weight">{{ info.camera.weight }}</td>
+					<td data-label="Materials">{{ info.camera.materials }}</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div ng-hide="(!info) || (!(info.chip))" class="technical-specs-section">
+		<h4 class="title">Chip</h4>
+		<table class="technical-specs-table">
+			<thead>
+				<tr>
+					<th>Type</th>
+					<th>OS</th>
+					<th>Dimensions</th>
+					<th>Weight</th>
+					<th>Material</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td data-label="Type">{{ info.chip.type }}</td>
+					<td data-label="OS">{{ info.chip.OS }}</td>
+					<td data-label="Dimensions">{{ info.chip.dimensions }}</td>
+					<td data-label="Weight">{{ info.chip.weight }}</td>
+					<td data-label="Materials">{{ info.chip.materials }}</td>
 				</tr>
 			</tbody>
 		</table>

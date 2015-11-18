@@ -2,31 +2,38 @@
 	"productsList": [
 		{
 			"id": 0,
-            "name": "product0"
+            "name": "product0",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
 		},
 		{
 			"id": 1,
-            "name": "product1"
+            "name": "product1",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
     	},
     	{
 			"id": 2,
-            "name": "product2"
+            "name": "product2",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
     	},
     	{
 			"id": 3,
-            "name": "product3"
+            "name": "product3",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
         },
     	{
 			"id": 4,
-            "name": "product4"
+            "name": "product4",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
     	},
     	{
 		 	"id": 5,
-            "name": "product5"
+            "name": "product5",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
     	},
     	{
 		 	"id": 6,
-            "name": "product6"
+            "name": "product6",
+            "icon": "http://placehold.it/80x80/ffffff/000000"
     	}
     ]
 }    	

@@ -1,5 +1,5 @@
-1. Crear 2 directivas para mostrar la información de productos:
-	LA primera directiva es capaz de iterar en la lista de productos y mostrar..
-	La segunda muestra las especificaciones técnicas
+1. Vamos a utilizar la directiva duScroll que nos permite...
 
-2. Crear Unit y E2E tests
+2. Hacer la barra de navegación de productoas "sctiky" cuando pasemos sobre ella.
+
+3. Detonar animaciones cuando pasemos por una seccion de producto de tipo imagen

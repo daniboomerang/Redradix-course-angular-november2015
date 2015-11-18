@@ -1,0 +1,11 @@
+<div id="product-navbar">
+	<ul>
+		<li class="product-name"><a href="#product-container"><h3>{{ productName }}</h3></a></li>
+       	<li id="{{subsection.toLowerCase()}}-link" ng-repeat="subsection in productSubsections" class="product-section">
+			<a href="#{{ subsection.toLowerCase() }}"><h3>{{ subsection }} </h3></a>
+    	</li>
+    	<li id="technical-specs-wrapper-link" class="product-section">
+    		<a href="#technical-specs-wrapper"><h3>Technical Specifications</h3></a>
+    	</li>
+    </ul>
+</div>

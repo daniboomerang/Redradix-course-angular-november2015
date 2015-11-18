@@ -1,7 +1,14 @@
-<div class="product-container">
-	<h1 class="title">{{ product.name }}</h1>
-	<div ng-repeat="descriptiveElement in product.descriptions">
-		<descriptive-element info="descriptiveElement"></descriptive-element>
+<div id="product-container">
+	<div id="product-navbar-wrapper">
+		<div product-navbar product="product" is-active="navbarProductActive" current-product-subsection=" currentProductSubsection"></div>
 	</div>
-	<technical-specifications info="product.technicalSpecs"></technical-specifications>
+	<div id="product-info-container">
+		<h1 id="product-description" class="title"> {{ product.description }} </h1>
+		<div id="{{subsection.name.toLowerCase()}}" ng-repeat="subsection in product.subsections">
+			<product-subsection info="subsection"></product-subsection>
+		</div>
+		<div id="technical-specs-wrapper">
+			<technical-specifications info="product.technicalSpecs"></technical-specifications>
+		</div>
+	</div>
 </div>

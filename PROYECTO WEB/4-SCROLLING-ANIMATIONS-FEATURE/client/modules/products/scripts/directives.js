@@ -1,5 +1,12 @@
 var productsDirectives = angular.module('productsDirectives', ['productsServices']);  
 
+productsDirectives.directive('index', function() {
+  return {
+    restrict: 'E',
+    templateUrl: 'modules/products/views/index.html'
+  };
+});
+
 productsDirectives.directive('products', function(Products, $q) {
   return {
     restrict: 'E',
@@ -16,27 +23,19 @@ productsDirectives.directive('products', function(Products, $q) {
 
 productsDirectives.directive('productsNavbar', function($location) {
   return {
-    restrict: 'E',  
+    restrict: 'EA',  
     templateUrl: 'modules/products/views/products-navbar.html',
     link: function (scope, element) {
 
       init();
 
-      scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){ 
-        scope.currentProductName = $location.path().substring(1).split("/")[1];
-      })
-      
       function init() {
         scope.currentProductName = $location.path().substring(1).split("/")[1];
+        scope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams){ 
+          scope.currentProductName = $location.path().substring(1).split("/")[1];
+        })
       }
     }  
-  };
-});
-
-productsDirectives.directive('index', function() {
-  return {
-    restrict: 'E',
-    templateUrl: 'modules/products/views/index.html'
   };
 });
 
@@ -52,7 +51,34 @@ productsDirectives.directive('product', function($state, Products) {
   };
 });
 
-productsDirectives.directive('descriptiveElement', function($compile) {
+productsDirectives.directive('productNavbar', function() {
+  return {
+    restrict: 'EA',  
+    templateUrl: 'modules/products/views/product-navbar.html',
+    scope: {
+      product: '='
+    },
+    link: function (scope, element, attrs) {
+
+      init();
+
+      function init() {
+
+        scope.$watch('product', function() { 
+          if (scope.product != undefined) { 
+            scope.productName = scope.product.name;
+            scope.productSubsections = [];
+            for (var i=0; i<scope.product.subsections.length; i++){
+              scope.productSubsections.push(scope.product.subsections[i].name);
+            }
+          } 
+        });
+      }
+    }  
+  };
+});
+
+productsDirectives.directive('productSubsection', function($compile) {
   return {
     restrict: 'E',
     scope: {
@@ -61,34 +87,34 @@ productsDirectives.directive('descriptiveElement', function($compile) {
     compile: function compile(tElement, tAttrs, transclude) {
     
       function createHtmlSubelementText(text, classes) {
-        var html = '<div class="descriptive-subelement-wrapper ' + classes + '"> <div class="descriptive-subelement">' + text + '</div></div>';
+        var html = '<div class="subsection-subelement-wrapper ' + classes + '"><div class="subsection-subelement">' + text + '</div></div>';
         return html;
       }
 
       function createHtmlSubelementImage(src, classes) {
-        var html = '<div class="descriptive-subelement-wrapper ' + classes + '"><div class="descriptive-subelement"><img class="img-responsive" alt="" src="' + src + '"></div></div>';
+        var html = '<div class="subsection-subelement-wrapper ' + classes + '"><div class="subsection-subelement"><img class="img-responsive" alt="" src="' + src + '"></div></div>';
         return html;     
       }
 
-      function createHtml(descriptiveElement) {
+      function createHtml(subsection) {
         var html;
-        if (descriptiveElement.type == 'text-image') {
-          html = '<div class="descriptive-element" style="background:' + descriptiveElement.background + '">' + createHtmlSubelementText(descriptiveElement.description, 'left') + createHtmlSubelementImage(descriptiveElement.image, 'right') + '</div>';
+        if (subsection.type == 'text-image') {
+          html = '<div class="subsection-element" style="background:' + subsection.background + '">' + createHtmlSubelementText(subsection.description, 'left') + createHtmlSubelementImage(subsection.image, 'right') + '</div>';
           return html;
             
         }
-        else if (descriptiveElement.type == 'image-text') {
-          html = '<div class="descriptive-element" style="background:' + descriptiveElement.background + '">' + createHtmlSubelementImage(descriptiveElement.image, 'left') +createHtmlSubelementText(descriptiveElement.description, 'right') +  '</div>';
+        else if (subsection.type == 'image-text') {
+          html = '<div class="subsection-element" style="background:' + subsection.background + '">' + createHtmlSubelementImage(subsection.image, 'left') +createHtmlSubelementText(subsection.description, 'right') +  '</div>';
           return html;
             
         }
-        else if (descriptiveElement.type == 'text') {
-          html = '<div class="descriptive-element" style="background:' + descriptiveElement.background + '">' + createHtmlSubelementText(descriptiveElement.description, 'center') + '</div>';
+        else if (subsection.type == 'text') {
+          html = '<div class="subsection-element" style="background:' + subsection.background + '">' + createHtmlSubelementText(subsection.description, 'center') + '</div>';
           return html;
             
         }
         else { 
-          html = '<div class="descriptive-element" style="background:' + descriptiveElement.background + '">' + createHtmlSubelementImage(descriptiveElement.image, 'center') + '</div>';
+          html = '<div class="subsection-element" style="background:' + subsection.background + '">' + createHtmlSubelementImage(subsection.image, 'center') + '</div>';
           return html;
         } 
       }
@@ -98,7 +124,9 @@ productsDirectives.directive('descriptiveElement', function($compile) {
           var html = createHtml(scope.info)
           iElement.append(html);
         },
-        post: function postLink(scope, iElement, iAttrs) { }
+        post: function postLink(scope, iElement, iAttrs) { 
+
+        }
       }
     }
   };
@@ -113,7 +141,12 @@ productsDirectives.directive('technicalSpecifications', function() {
     templateUrl: 'modules/products/views/technical-specifications.html',
     controller: function($scope) {
       $scope.$watch('info', function() { 
-        if ($scope.info != undefined) { $scope.design = $scope.info.design; } 
+        if ($scope.info != undefined) {
+          ($scope.info.design !=  undefined ) ? $scope.design = $scope.info.design: $scope.design = false;
+          ($scope.info.chip !=  undefined ) ? $scope.chip = $scope.info.chip: $scope.chip = false;
+          ($scope.info.camera !=  undefined ) ? $scope.camera = $scope.info.camera: $scope.camera = false;
+          ($scope.info.display !=  undefined ) ? $scope.display = $scope.info.display: $scope.display = false;
+        } 
       })
     }  
   };
