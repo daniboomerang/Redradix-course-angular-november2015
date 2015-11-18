@@ -1,0 +1,10 @@
+1. La directiva producto es capaz de conocer cuando al hacer scroll, 
+   su barra de navegación o una subsección determinada se encuentran en lo alto del documento.
+
+   - La barra de navegación de un producto se vuelve "sticky" cuando  
+   	 esta se encuentra en lo alto del documento
+
+   - Los links a las subsecciones el link a las especificaciones 
+   	 tecnicas de la barra de navegación de un producto se vuelven activas cuando esta se encuentra en lo alto del documento
+
+2. Cuando en la barra de navegación de un producto se clica sobre una subseccion determinada, vamos hasta ella en 1s a traves de una función ease t*(2-t) y solo cuando llegamos a ella el link se vuelve activo.

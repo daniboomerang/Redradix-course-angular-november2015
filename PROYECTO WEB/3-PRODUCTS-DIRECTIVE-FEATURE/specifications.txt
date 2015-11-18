@@ -1,5 +1,5 @@
-1. Vamos a utilizar la directiva duScroll que nos permite...
+1. El usuario es capaz de visualizar las subsecciones de un producto.
+   Existe una directiva <product-subsection info="subsection"></product-subsection> que se enccarga de mostrar estas subsecciones. Recibe como parámetro la subsección
 
-2. Hacer la barra de navegación de productoas "sctiky" cuando pasemos sobre ella.
-
-3. Detonar animaciones cuando pasemos por una seccion de producto de tipo imagen
+2. El usuario es capaz de visualizar las especificaciones técnicas de 	 un producto.
+   Existe una directiva <technical-specifications info="product.technicalSpecs"></technical-specifications> que se enccarga de mostrar las especificaiones técnicas en una tabla. Recibe como parámetro las especificaciones de dicho producto

@@ -1,5 +1,0 @@
-1. Vamos a utilizar la directiva duScroll que nos permite...
-
-2. Hacer la barra de navegación de productoas "sctiky" cuando pasemos sobre ella.
-
-3. Detonar animaciones cuando pasemos por una seccion de producto de tipo imagen
