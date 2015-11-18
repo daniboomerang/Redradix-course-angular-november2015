@@ -1,8 +1,8 @@
 <div id="product-navbar">
 	<ul>
 		<li class="product-name"><a href="#product-container" du-smooth-scroll><h3>{{ productName }}</h3></a></li>
-       	<li id="{{description.toLowerCase()}}-link" ng-repeat="description in descriptionNames" class="product-section">
-			<a href="#{{ description.toLowerCase() }}" du-smooth-scroll duration="1000" offset="90"><h3>{{ description }} </h3></a>
+       	<li id="{{subsection.toLowerCase()}}-link" ng-repeat="subsection in productSubsections" class="product-section">
+			<a href="#{{ subsection.toLowerCase() }}" du-smooth-scroll duration="1000" offset="90"><h3>{{ subsection }} </h3></a>
     	</li>
     	<li id="technical-specs-wrapper-link" class="product-section">
     		<a href="#technical-specs-wrapper" duration="1000" du-smooth-scroll offset="90"><h3>Technical Specifications</h3></a>

@@ -86,9 +86,9 @@ productsDirectives.directive('productNavbar', function() {
         scope.$watch('product', function() { 
           if (scope.product != undefined) { 
             scope.productName = scope.product.name;
-            scope.descriptionNames = [];
+            scope.productSubsections = [];
             for (var i=0; i<scope.product.subsections.length; i++){
-              scope.descriptionNames.push(scope.product.subsections[i].name);
+              scope.productSubsections.push(scope.product.subsections[i].name);
             }
           } 
         });

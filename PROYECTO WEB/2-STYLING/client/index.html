@@ -13,6 +13,7 @@
         <!-- APP CSS -->
         <link rel="stylesheet" href="styles/app.css">
         <link rel="stylesheet" href="styles/navbar.css">
+        <link rel="stylesheet" href="styles/footer.css">
  
         <!-- APP MODULES-->
             <!-- HOME MODULE -->
@@ -24,24 +25,26 @@
 
     <body ng-app="app">
 
-        <div id="navbar" navbar></div>
+        <div navbar></div>
         <div id="content" ui-view></div>
-        <div id="footer" footer></div>
+        <div footer></div>
 
         <script src="scripts/vendor/jquery.js"></script>
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-scroll/angular-scroll.js"></script>
+
   
         <!-- APP SCRIPTS-->
         <script src="scripts/app.js"></script>
         <!-- -->      
 
         <!-- APP MODULES-->
-            <!-- SERVICE MODULE-->
+            <!-- HOME MODULE-->
             <script src="modules/home/scripts/home.js"></script>
             <script src="modules/home/scripts/directives.js"></script>
             <!-- -->      
-             <!-- API MODULE-->
+             <!-- PRODUCTS MODULE-->
             <script src="modules/products/scripts/products.js"></script>
             <script src="modules/products/scripts/directives.js"></script>
             <script src="modules/products/scripts/services.js"></script>

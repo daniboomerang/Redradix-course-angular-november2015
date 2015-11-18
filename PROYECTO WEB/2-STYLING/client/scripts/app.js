@@ -1,36 +1,36 @@
 'use strict';
 
 var app = angular.module('app', [
-	'ui.router',
-	'home',
-	'products'
+  'ui.router',
+  'home',
+  'products'
 ]);
 
 app.config(
   [ '$stateProvider', '$urlRouterProvider', '$locationProvider',
     function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-		/////////////////////////////
-		// Redirects and Otherwise //
-		/////////////////////////////
+    /////////////////////////////
+    // Redirects and Otherwise //
+    /////////////////////////////
 
-		// Example of using function rule as param
-	    $urlRouterProvider.otherwise(function($injector, $location){
-	        return '/' + $location.path();
-	    });
+    // Example of using function rule as param
+      $urlRouterProvider.otherwise(function($injector, $location){
+          return '/' + $location.path();
+      });
 
-		$stateProvider
-	    
-	    //////////////////////////
-		// State Configurations //
-		//////////////////////////
-	    
-	    .state('404', {
-	    	url: '/{path:.*}',
-	        template: '<page-not-found></page-not-found>'
-	    })
+    $stateProvider
+      
+    //////////////////////////
+    // State Configurations //
+    //////////////////////////
+      
+      .state('404', {
+        url: '/{path:.*}',
+          template: '<page-not-found></page-not-found>'
+      })
 
-		$locationProvider.html5Mode(true); 
+    $locationProvider.html5Mode(true); 
     }
   ]
 );

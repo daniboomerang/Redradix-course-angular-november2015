@@ -1,8 +1,2 @@
-<div id="products-navbar">
-    <ul>
-        <li ng-repeat="product in productsList" class="pure-menu-item">
-			<a ui-sref="products.open({ productName: product.name })"> <h4> {{ product.name }} </h4> </a>
-        </li>
-    </ul>
-</div>
-<div ui-view></div>
+<div products-navbar products="{{ productsList }}"></div>
+<ui-view></ui-view>
