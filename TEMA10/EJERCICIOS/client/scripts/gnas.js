@@ -35,10 +35,10 @@ angular.module('gnasApp', [
             // route for Module Promise + External Api
             .when('/promise', { templateUrl : 'modules/generators/promise/views/promise.html'})
 
-            // route for Module Promise + External Api
+            // route for Module Svg
             .when('/svg', { templateUrl : 'modules/generators/svg/views/svg.html'})
 
-            // Otherwise -> go to Module GNA Manual
+            // Otherwise -> go to Module Svg
             .otherwise({redirectTo: '/svg'});
 
     $locationProvider.html5Mode({

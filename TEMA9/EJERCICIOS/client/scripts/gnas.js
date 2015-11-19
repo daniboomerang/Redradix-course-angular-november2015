@@ -34,7 +34,7 @@ angular.module('gnasApp', [
             // route for Module Promise + External Api
             .when('/promise', { templateUrl : 'modules/generators/promise/views/promise.html'})
 
-            // Otherwise -> go to Module GNA Manual
+            // Otherwise -> go to Module Promise
             .otherwise({redirectTo: '/promise'});
 
     $locationProvider.html5Mode({
