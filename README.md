@@ -58,7 +58,7 @@
 * The deferred API
 * The promise API
 
-### Svg manipulations
+### Svg + Angularjs
 * Binding SVG properties and the scope
 * ng-include
 
@@ -71,5 +71,5 @@
 * Routed with the state provider
 * Designed with directives and only directives 
 * Triggers animations on scroll
-* Mocks and external API
+* Mocks an external API
 * Unit and E2E tested 
